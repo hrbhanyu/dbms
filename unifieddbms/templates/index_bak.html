@@ -1,0 +1,28 @@
+<h1 class='page-header'>Server Info</h1>
+<div class="table-responsive">
+<table class="table" id='table1' class="table table-striped" width='1052'>
+  <thead>
+    <tr>
+      <th>Server Name</th>
+      <th>IP Address</th>
+      <th>Remote Port</th>
+      <th>OS Type</th>
+      <th>DB Type</th>
+      <th>Region</th>
+    </tr>
+  </thead>
+{% for i in result %}
+<tbody>
+            <tr>
+                <td>{{i.server_name}}</td>
+                <td>{{i.ip_address}}</td>
+                <td>{{i.remote_port}}</td>
+                <td>{{i.os_type}}</td>
+                <td>{{i.db_type}}</td>
+                <td>{{i.region}}</td>
+            </tr>
+</tbody>
+{% endfor %}
+</table>
+</div>
+</div>

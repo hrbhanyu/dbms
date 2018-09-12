@@ -1,0 +1,95 @@
+{% extends "base_site.html" %}
+
+{% block title %} Tables {% endblock title %}
+
+{% block stylesheets %}
+  {{ block.super }}
+{% endblock stylesheets %}
+
+{% block content %}
+    <div class="right_col" role="main">
+        <div class="">
+            <!--
+            <div class="page-title">
+                <div class="title_left">
+                    <h3>Tables</h3>
+                </div>
+
+                <div class="title_right">
+                    <div class="col-md-5 col-sm-5 col-xs-12 form-group pull-right top_search">
+                        <div class="input-group">
+                            <input type="text" class="form-control" placeholder="Search for...">
+                            <span class="input-group-btn">
+                                <button class="btn btn-default" type="button">Go!</button>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="clearfix"></div>
+            -->
+            <!-- List server information -->
+            <div class="row">
+                <!--
+                <div class="col-md-6 col-sm-6 col-xs-12">
+                -->
+                    <div class="x_panel">
+                        <div class="x_title">
+                            <h2>Server Info <small>All servers in DBRAT</small></h2>
+                            <ul class="nav navbar-right panel_toolbox">
+                                <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+                                </li>
+                                <li class="dropdown">
+                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-wrench"></i></a>
+                                    <ul class="dropdown-menu" role="menu">
+                                        <li><a href="#">Settings 1</a>
+                                        </li>
+                                        <li><a href="#">Settings 2</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li><a class="close-link"><i class="fa fa-close"></i></a>
+                                </li>
+                            </ul>
+                            <div class="clearfix"></div>
+                        </div>
+                        <div class="x_content">
+                            <table class="table table-striped jambo_table">
+                                <thead>
+                                <tr>
+                                    <th>Server ID</th>
+                                    <th>Server Name</th>
+                                    <th>IP Address</th>
+                                    <th>Remote Port</th>
+                                    <th>OS Type</th>
+                                    <th>DB Type</th>
+                                    <th>Region</th>
+                                </tr>
+                                </thead>
+                                {% for i in result %}
+                                <tbody>
+                                <tr>
+                                    <td>{{i.server_id}}</td>
+                                    <td>{{i.server_name}}</td>
+                                    <td>{{i.ip_address}}</td>
+                                    <td>{{i.remote_port}}</td>
+                                    <td>{{i.os_type}}</td>
+                                    <td>{{i.db_type}}</td>
+                                    <td>{{i.region}}</td>
+                                </tr>
+                                </tbody>
+                                {% endfor %}
+                            </table>
+                        </div>
+                    <!--
+                    </div>
+                    -->
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock content %}
+{% block javascripts %}
+    {{ block.super }}
+{% endblock javascripts %}
